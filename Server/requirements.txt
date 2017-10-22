@@ -1,0 +1,6 @@
+Flask == 0.12.2
+flask-pymongo == 0.5.1
+twilio == 6.8.1
+stripe == 1.69.0
+flask-cors == 3.0.3
+
