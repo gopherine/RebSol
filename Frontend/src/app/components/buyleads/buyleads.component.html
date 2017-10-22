@@ -24,8 +24,8 @@
 
           <mat-form-field>
               <mat-select placeholder="Services" [(ngModel)]="cityName" name="serivice">
-                <mat-option *ngFor="let service of services" [value]="service">
-                  {{service}}
+                <mat-option *ngFor="let service of services" [value]="service.serviceName">
+                  {{service.serviceName}}
                 </mat-option>
               </mat-select>
             </mat-form-field>

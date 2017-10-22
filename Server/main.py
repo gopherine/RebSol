@@ -75,8 +75,8 @@ def get_city(city_name):
     services=s['Services']
     serv=[]
     for p in services:
-	    serv.append(p['Service'])
-    return jsonify({'output':serv})
+	    serv.append({'serviceName': p['Service']})
+    return jsonify(serv)
         
 #######Returns list of cities for that service	
 @app.route('/store/city', methods=['GET'])	
