@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+$Josefin: 'Josefin Sans', sans-serif;   
+
+.navbar{
+    font-family: $Josefin;
+    border-bottom: 1px solid;
+    border-bottom-color: #eaeaea !important;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+    z-index: 2;
+    position: fixed;
+}
+img{
+    height:60px;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active, {
+  color: #ffffff !important;
+  font-family: $Josefin;
+  background-color: #001e4f !important;
+  border-color: #001e4f !important;
+}
+.btn-outline-primary{
+  border-color: #001e4f !important;
+  color:#001e4f;
+  background-color: white;
+  font-family: $Josefin;
+}
+
+/* MODAL STYLING */
+
+.div1{
+  position: fixed;
+  background: white;
+  margin-top:11vh;
+  z-index: 1;
+  height: 100vh;
+  width:99.5vw;
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+  animation-duration: 0.3s;
+}
+
+@keyframes fadeInOpacity {
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.navbar-toggler-icon{
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}

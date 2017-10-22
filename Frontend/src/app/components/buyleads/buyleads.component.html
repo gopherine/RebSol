@@ -1,0 +1,37 @@
+<section class="container" *ngIf="cities">
+  <div class="container">
+  <mat-card class="header">
+    <h1 class="text-center">Buy Qualified Deals for the Services you provide</h1>
+    <p class="text-center">Being a service provider for specific Business Services you can "Buy Deals" which are "Qualified leads" of Business Owners.</p>
+  </mat-card><br>
+  <mat-card class="search">
+    <form>
+          <mat-form-field>
+            <mat-select placeholder="Country" [(ngModel)]="cityName" name="food">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+          <mat-form-field>
+            <mat-select placeholder="City" (change)="getServices($event.value)" [(ngModel)]="cityName" name="city">
+              <mat-option *ngFor="let city of cities" [value]="city.CityName">
+                {{city.CityName}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field> 
+
+          <mat-form-field>
+              <mat-select placeholder="Services" [(ngModel)]="cityName" name="serivice">
+                <mat-option *ngFor="let service of services" [value]="service">
+                  {{service}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary">Search</button>
+    </form>
+  </mat-card>
+  </div>
+</section>

@@ -1,0 +1,76 @@
+{"CityName":"Delhi",
+	   "Services":  [ {"Service":"ERP",
+	                   "Leads":[{"LeadReqNumber": 5935,
+					             "LeadInfo":{"ServiceRequirementTitle" : "Request for payroll on premises",
+								              "ServiceType": "Payroll On Cloud",
+											  "BusinessLine": "The company is into the business of securities services in corporate sector.",
+											  "Industry" : "Services",
+											  "NumberOfEmployees" : "1000",
+											  "YearEstablished" : "2010",
+											  "Turnover" : "2 crore",
+											  "RMName"  : "Suraj Mandal"
+								            }
+								},
+								{"LeadReqNumber": 5936,
+					             "LeadInfo":{"ServiceRequirementTitle" : "Request for payroll on premises",
+								              "ServiceType": "Payroll On Cloud",
+											  "BusinessLine": "The company is into the business of securities services in corporate sector.",
+											  "Industry" : "Services",
+											  "NumberOfEmployees" : "1045",
+											  "YearEstablished" : "2003",
+											  "Turnover" : "2 crore",
+											  "RMName"  : "Arpit Mandal"
+								            }
+								},
+								{"LeadReqNumber": 5937,
+					             "LeadInfo":{"ServiceRequirementTitle" : "Request for payroll on premises",
+								              "ServiceType": "Payroll On Cloud",
+											  "BusinessLine": "The company is into the business of securities services in corporate sector.",
+											  "Industry" : "Services",
+											  "NumberOfEmployees" : "1000",
+											  "YearEstablished" : "2010",
+											  "Turnover" : "2 crore",
+											  "RMName"  : "Atharva Mandal"
+								            }
+								}
+					        ]
+	                    },
+						{"Service":"HRM",
+	                   "Leads":[{"LeadReqNumber": 5938,
+					             "LeadInfo":{"ServiceRequirementTitle" : "Request for payroll on premises",
+								              "ServiceType": "Payroll On Cloud",
+											  "BusinessLine": "The company is into the business of securities services in corporate sector.",
+											  "Industry" : "Services",
+											  "NumberOfEmployees" : "1000",
+											  "YearEstablished" : "2010",
+											  "Turnover" : "2 crore",
+											  "RMName"  : "Suraj Mandal"
+								            }
+								},
+								{"LeadReqNumber": 5939,
+					             "LeadInfo":{"ServiceRequirementTitle" : "Request for payroll on premises",
+								              "ServiceType": "Payroll On Cloud",
+											  "BusinessLine": "The company is into the business of securities services in corporate sector.",
+											  "Industry" : "Services",
+											  "NumberOfEmployees" : "1045",
+											  "YearEstablished" : "2003",
+											  "Turnover" : "2 crore",
+											  "RMName"  : "Arpit Mandal"
+								            }
+								},
+								{"LeadReqNumber": 5940,
+					             "LeadInfo":{"ServiceRequirementTitle" : "Request for payroll on premises",
+								              "ServiceType": "Payroll On Cloud",
+											  "BusinessLine": "The company is into the business of securities services in corporate sector.",
+											  "Industry" : "Services",
+											  "NumberOfEmployees" : "1000",
+											  "YearEstablished" : "2010",
+											  "Turnover" : "2 crore",
+											  "RMName"  : "Atharva Mandal"
+								            }
+								}
+					        ]
+	                    }
+					]
+					  
+}

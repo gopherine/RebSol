@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Nunito:600');
+$Josefin: 'Josefin Sans', sans-serif;
+$Nunito: 'Nunito', sans-serif;
+
+a{
+     text-decoration:none;
+}
+
+p{
+    font-family: $Nunito;
+}
+
+.ServiceCard{
+  width: 275px;
+  margin-left:10px;
+  margin-top:20px;
+  text-align: center;
+}
+
+.ServiceCard:hover{
+    background-color: rgb(217, 217, 223);
+}
+img{
+    height:60px;
+    width: 60px;
+}
+
+section{
+    margin-top:120px;
+    font-family: $Nunito;
+}
+
+h1{
+    font-family: $Josefin !important;
+    text-decoration: underline;
+    font-size:4em;
+}
+
+@media only screen and (max-width: 768px){
+    .row{
+        display: table;
+        margin: 0 auto;
+    }    
+
+    h1{
+        font-size:3em;
+    }
+}
+@media screen and (min-width: 1200px){
+mat-card{
+    height:150px;
+}
+mat-card > p{
+    padding-top:12%;
+    font-size: 125%;
+}
+}

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Nunito:600');
+$Josefin: 'Josefin Sans', sans-serif;
+$Nunito: 'Nunito', sans-serif;
+
+section{
+    text-align: center;
+}
+mat-form-field{
+    margin-right:40px;
+}
+
+h1{
+    font-family: $Josefin !important;
+    text-decoration: underline;
+    font-size:4em;
+    margin-bottom:5vh;
+}

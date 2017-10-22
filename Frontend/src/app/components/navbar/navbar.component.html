@@ -1,0 +1,33 @@
+<nav class="navbar navbar-toggleable-md navbar-dark navbar-fixed-top">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">
+    <img src="../../../assets/logo/logo.png" alt="REBSolutions">
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active"><b>HOME </b><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><b>SERVICES</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><b>ABOUT</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><b>CONTACT</b></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="button" routerLink="/buyleads" routerLinkActive="active">BUY LEADS</button>&nbsp;&nbsp;
+      <!-- Modal view and button to see product details-->
+      <div *ngIf="div1"><button (click)="toggle();animate()" type=button class="btn btn-outline-secondary"><i class="fa fa-th"   [@trigger]='state' aria-hidden="true"></i></button></div>
+      <div *ngIf="div2"><button (click)="toggle();animate()" type=button class="btn btn-outline-secondary"><i class="fa fa-times"  [@trigger]='state' aria-hidden="true"></i></button></div>
+      <!-- END MODAL -->
+    </form>
+  </div>
+</nav>
+<div style="background : whitesmoke;" class="div1" *ngIf="div2"><app-services></app-services></div>

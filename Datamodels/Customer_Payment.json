@@ -1,0 +1,23 @@
+
+
+	{"CustomerName":"Arpit",
+ "Customer_Phone": "7895997445",
+ "EmailID":"barpit87@gmail.com",
+	   "Services": [ {"Service":"ERP",
+	                        "Leads":[{"LeadReqNumber": 12345 ,
+							          "PaymentType":"LeadInvestigate",
+							          "LeadPaymentStatus":"Paid"
+					                  
+                                   },
+								   {"LeadReqNumber": 12346 ,
+								    "PaymentType":"LeadPurchase",
+					                "LeadPaymentStatus":"Paid" 
+                                   }]
+                        },
+						{"Service":"HRM",
+	                        "Leads":[{"LeadReqNumber": 12349 ,
+							          "PaymentType":"Purchase",
+					                  "LeadPaymentStatus":"Paid"
+                                   }]
+                        }]
+    }

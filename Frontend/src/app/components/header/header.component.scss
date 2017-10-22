@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+$Josefin: 'Josefin Sans', sans-serif;
+
+header{
+    font-family: $Josefin;
+}
+
+.outer{
+    background: black;
+}
+
+.bgBox{
+    position: relative;
+    height: 100vh;
+    width: 99.5vw;
+    opacity: 0.5;
+    background: {
+         image: url("../../../assets/slides/slide6.jpg");
+         size: cover;
+         position: top center;
+         attachment: fixed;
+    }
+}
+
+.text { 
+   position: absolute; 
+   top: 50%;
+   left: 0;
+   padding-left:100px; 
+   color:whitesmoke;
+   opacity:0.9;
+}
+
+.parentheadertext{
+    font-size: 500%;
+}
+
+@media only screen and (max-width: 768px) {
+    .parentheadertext{
+        font-size: 200%;
+    }
+    .childheadertext{
+        font-size:150%;
+    }
+
+    .text { 
+        position: absolute; 
+        top: 40%;
+        left: 0;
+        padding-left:50px; 
+        color:whitesmoke;
+        opacity:0.9;
+     }
+}

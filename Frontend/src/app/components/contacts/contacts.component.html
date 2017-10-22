@@ -1,0 +1,31 @@
+<section>
+<h1>CONTACT US</h1>
+<div class="container">
+  <form [formGroup]="contactUs" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput placeholder="Enter your email"
+    formControlName="email" required>
+    <mat-error *ngIf="!contactUs.get('email').valid && contactUs.get('email').touched">Enter a valid email-abc@xyz.com</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter your name" 
+    formControlName="name" required>
+    <mat-error *ngIf="!contactUs.get('name').valid && contactUs.get('name').touched">Please enter your name</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter your number" value="+1234567890"
+    formControlName="number"  required>
+    <mat-error *ngIf="!contactUs.get('number').valid && contactUs.get('number').touched">Enter a valid number with Country Code</mat-error>
+  </mat-form-field><br>
+
+  <mat-form-field style="width:41vw;margin-left:-3vw">
+      <textarea matInput placeholder="Enter your Message"
+      formControlName="message"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+</div>
+</section>
