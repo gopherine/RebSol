@@ -18,7 +18,7 @@ export class BuyleadsComponent implements OnInit {
     ];
 
     cities:Object;
-    services=["ERP","HRM"];
+    services;
     
 
     // [
@@ -37,7 +37,7 @@ export class BuyleadsComponent implements OnInit {
 
   getServices(cityName){
     this.data.getServices(cityName).subscribe(
-      (response)=>console.log(response["output"])
+      (response)=>this.services=response
      )
   }
 }
