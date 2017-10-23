@@ -10,11 +10,19 @@ export class DataService {
     return this.http.post('http://localhost:5000/contact_us',contactDetails)
   }
 
-  getCity(){
-    return this.http.get('http://localhost:5000/store/city')
+  getCountry(){
+    return this.http.get('http://localhost:5000/country')
   }
 
-  getServices(cityName){
-    return this.http.get('http://localhost:5000/store/'+cityName);
+  getCity(countryName){
+    return this.http.get('http://localhost:5000/reb/'+countryName)
+  }
+
+  getServices(countryName,cityName){
+    return this.http.get('http://localhost:5000/reb/'+countryName+'/'+cityName);
+  }
+
+  getLeads(countryName,cityName,serviceName){
+    return this.http.get('http://localhost:5000/reb/'+countryName+'/'+cityName+'/'+serviceName)
   }
 }

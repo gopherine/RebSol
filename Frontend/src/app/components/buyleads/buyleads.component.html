@@ -1,4 +1,4 @@
-<section class="container" *ngIf="cities">
+<section class="container" *ngIf="countries">
   <div class="container">
   <mat-card class="header">
     <h1 class="text-center">Buy Qualified Deals for the Services you provide</h1>
@@ -7,9 +7,9 @@
   <mat-card class="search">
     <form>
           <mat-form-field>
-            <mat-select placeholder="Country"  name="food">
-              <mat-option *ngFor="let food of foods" [value]="food.value">
-                <span>{{food.viewValue}}</span>
+            <mat-select placeholder="Country"  name="country" [(ngModel)]="countryName" (change)="getCities($event.value)">
+              <mat-option *ngFor="let country of countries" [value]="country.Country">
+                <span>{{country.Country}}</span>
               </mat-option>
             </mat-select>
           </mat-form-field>
@@ -23,15 +23,37 @@
           </mat-form-field> 
 
           <mat-form-field>
-              <mat-select placeholder="Services" name="serivice">
+              <mat-select placeholder="Services" [(ngModel)]="serviceName" name="serivice">
                 <mat-option *ngFor="let service of services" [value]="service.serviceName">
                   <span>{{service.serviceName}}</span>
                 </mat-option>
               </mat-select>
             </mat-form-field>
 
-            <button mat-raised-button color="primary">Search</button>
+            <button (click)="onSearch()" mat-raised-button color="primary">Search</button>
     </form>
   </mat-card>
+
+  <div *ngIf="leads">
+    <br>
+    <mat-card style="margin-top:50px;" *ngFor="let lead of leads">
+      <div class="container">
+        <mat-card-header >
+            <mat-card-title class="text-center" style="font-size:2em">Buy {{serviceName}} evaluation service</mat-card-title>
+            <mat-card-subtitle class="text-center">{{whatTime | async | date:'d/M/yy hh:mm:ss'}}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content style="font-size:1.1em;margin-top:20px;">
+            <tr><td>Lead Request Number </td> &nbsp;&nbsp;: &nbsp;<td>{{lead.LeadReqNumber}}</td></tr>
+            <tr><td>Industry</td>&nbsp; :&nbsp;<td>{{lead.LeadInfo.Industry}}</td></tr>
+            <tr><td>Service Type</td>&nbsp; :&nbsp;<td>{{lead.LeadInfo.ServiceType}}</td></tr>
+            <tr><td>Busisness</td>&nbsp; :&nbsp;<td>{{lead.LeadInfo.BusinessLine}}</td></tr>
+            <tr><td>Year Established</td>&nbsp; :&nbsp;<td>{{lead.LeadInfo.YearEstablished}}</td></tr>
+            <tr><td>RM Name</td>&nbsp;&nbsp;:&nbsp;<td>{{lead.LeadInfo.RMName}}</td></tr>
+            <tr><td>Turnover</td>&nbsp; :&nbsp;<td>{{lead.LeadInfo.Turnover}}</td></tr>
+            <button style="margin-top:20px;" mat-raised-button color="accent">Pay for details</button>
+          </mat-card-content>
+          </div>
+    </mat-card>
+  </div>
   </div>
 </section>
