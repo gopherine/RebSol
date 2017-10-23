@@ -48,23 +48,51 @@ def create_store():
     output={'username': new_user['username'],'firstname':new_user['firstname']}
     return jsonify({'result':output})
 	
-
+#######Returns list oo counties 
+@app.route('/country', methods=['GET'])	
+def get_all_country():
+    dbh=mongo.db.Country
+    countries=dumps(dbh.find({},{'Country':1, '_id':0}))
+    return countries
 
 	
 	
-#######Returns all the leads in a particular city for a particular service
-@app.route('/store/<string:city_name>/<string:service_name>', methods=['GET'])	
-def get_store(city_name,service_name):
-    dbh=mongo.db.City
-    s = dbh.find_one({'CityName' : city_name})
+#####Returns the cities in a Country 
+#####Returns the cities in a Country
+
+@app.route('/reb/<string:country_name>')	
+def get_cities(country_name):
+    dbh=mongo.db.Country
+    return dumps(dbh.find({'Country' : country_name},{'CityName':1, '_id':0}))
+   
+#####Returns the Service names in a particular Country and city.
+
+@app.route('/reb/<string:country_name>/<string:city_name>')	
+def get_services(country_name,city_name):
+    dbh=mongo.db.Country
+    s = dbh.find_one({'Country':country_name,'CityName':city_name})
+    services=s['Services']
+    serv=[]
+    for p in services:
+	    serv.append({'serviceName': p['Service']})
+    return jsonify(serv)
+	
+
+	
+	
+#######Returns all the leads in a particular city for a particular service and for a particular country
+@app.route('/reb/<string:country_name>/<string:city_name>/<string:service_name>', methods=['GET'])	
+def get_store(country_name,city_name,service_name):
+    dbh=mongo.db.Country
+    s = dbh.find_one({'Country':country_name,'CityName':city_name})
     services=s['Services']
     for p in services: 
         if p['Service'] == service_name:
-           Output={'output':p}
-           return jsonify({'output':Output})
+           
+           return jsonify(p)
         else:
-            Output={'output': 'Error'}
-    return jsonify({'output':Output})
+            return jsonify({'output': 'Error'}) 
+
 
 
 #######Returns list of services in a city	
@@ -163,6 +191,8 @@ def pay():
 	description='LEAD')
    
     return redirect(url_for('thanks'))
+
+
 	
 
 		    		    
