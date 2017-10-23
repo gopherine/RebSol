@@ -7,25 +7,25 @@
   <mat-card class="search">
     <form>
           <mat-form-field>
-            <mat-select placeholder="Country" [(ngModel)]="cityName" name="food">
+            <mat-select placeholder="Country"  name="food">
               <mat-option *ngFor="let food of foods" [value]="food.value">
-                {{food.viewValue}}
+                <span>{{food.viewValue}}</span>
               </mat-option>
             </mat-select>
           </mat-form-field>
           
           <mat-form-field>
-            <mat-select placeholder="City" (change)="getServices($event.value)" [(ngModel)]="cityName" name="city">
+            <mat-select floatPlaceholder="always" placeholder="City" (change)="getServices($event.value)" [(ngModel)]="cityName" name="city">
               <mat-option *ngFor="let city of cities" [value]="city.CityName">
-                {{city.CityName}}
+                <span>{{city.CityName}}</span>
               </mat-option>
             </mat-select>
           </mat-form-field> 
 
           <mat-form-field>
-              <mat-select placeholder="Services" [(ngModel)]="cityName" name="serivice">
+              <mat-select placeholder="Services" name="serivice">
                 <mat-option *ngFor="let service of services" [value]="service.serviceName">
-                  {{service.serviceName}}
+                  <span>{{service.serviceName}}</span>
                 </mat-option>
               </mat-select>
             </mat-form-field>
